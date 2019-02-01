@@ -134,4 +134,15 @@ modal.clearBodyScroll = () => {
   });
 }
 
-modal.init();
+// when the doc is ready...
+ready(() => {
+  modal.init();
+});
+
+function ready(fn) {
+  if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
