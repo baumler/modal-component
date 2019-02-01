@@ -5,7 +5,7 @@ Pure JS accessible modal component with focus lock.
 ## Usage
 Surround your main content, including header & footer, with the following:
 ```html
-<div class="main-body-content"></div>
+<div class="blurred-content"></div>
 ```
 This will allow that content to be blurred when a modal opens.
 
@@ -60,13 +60,13 @@ Add the following:
 ### Styling
 You can style the modal any way you wish in order to keep it in your theme. Below are a list of the classes and their purpose.
 
-| Class Name        | Purpose
-| :---------------- | :---------------
-| main-body-content | content wrapper that can have a max-width, it is used to apply the blur effect behind the modal
-| modal             | full screen background overlay and contains the modal itself
-| modal-content     | the modal itself
-| modal-close       | the close button
-| a11y-hide         | used to visually hide elements but allow them to be used by screen readers
+| Class Name      | Purpose
+| :-------------- | :---------------
+| blurred-content | content wrapper that can have a max-width, it is used to apply the blur effect behind the modal
+| modal           | full screen background overlay and contains the modal itself
+| modal-content   | the modal itself
+| modal-close     | the close button
+| a11y-hide       | used to visually hide elements but allow them to be used by screen readers
 
 These classes are used behind the scenes
 

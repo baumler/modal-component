@@ -15,8 +15,8 @@ html {
       width: 100vw;
     }
 
-    .main-body-content {
-      filter: blur(2px);
+    .blurred-content {
+      filter: blur(4px);
     }
   }
 }
@@ -30,12 +30,6 @@ body {
 
 * {
   box-sizing: border-box;
-}
-
-.main-body-content {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .a11y-hide {

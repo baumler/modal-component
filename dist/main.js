@@ -48,7 +48,7 @@ modal.init = () => {
 modal.show = () => {
   modal.setBodyScroll();
   document.querySelector('html').classList.add('is-locked');
-  const content = document.querySelector('.main-body-content');
+  const content = document.querySelector('.blurred-content');
   if (content) {
     content.setAttribute('aria-hidden', true);
   } else {
@@ -73,7 +73,7 @@ modal.show = () => {
  */
 modal.hide = () => {
   document.querySelector('html').classList.remove('is-locked');
-  const content = document.querySelector('.main-body-content');
+  const content = document.querySelector('.blurred-content');
   if (content) {
     content.setAttribute('aria-hidden', false);
   } else {
