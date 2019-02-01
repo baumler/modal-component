@@ -1,0 +1,16 @@
+{
+  "name": "modal",
+  "version": "1.0.0",
+  "description": "Modal component with accessibility",
+  "scripts": {},
+  "author": "Tyler Baumler (tyler@dynamit.com)",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.1.6",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {}
+}
