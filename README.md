@@ -15,6 +15,10 @@ Do **not** add `max-width` to the `body` tag. That will cause the body to shift 
 
 ### The Trigger
 Include both the CSS and JS files from the dist folder.
+```html
+  <link href="/dist/main.css" rel="stylesheet">
+  <script async src="/dist/main.js"></script>
+```
 
 Add the following to trigger a modal to open:
 ```html
