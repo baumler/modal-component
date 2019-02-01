@@ -1,5 +1,5 @@
 # Modal Component
-Pure JS modal component.
+Pure JS accessible modal component with focus lock.
 
 
 ## Usage
@@ -36,9 +36,9 @@ Add the following:
       </button>
     </div>
 
-    <h2 class="title">Example Model</h2>
+    <h2 id="title">Example Model</h2>
 
-    <p class="desc">This is an example modal.</p>
+    <p id="desc">This is an example modal.</p>
 
     <button>Click me, I do nothing!</button>
   </div>
@@ -47,8 +47,10 @@ Add the following:
 :page_facing_up: Notes:
 
 * You can add anything to the modal itself.
-* To keep accessibility, keep the `title` and `desc` classes somewhere in the modal.
-* You must keep a close button and it must contain `data-modal-close`.
+* To keep accessibility, keep the `title` and `desc` ids somewhere in the modal.
+  * They must be unique
+  * Make sure to update the names in the corresponding `aria` tag.
+* You **must** keep a close button and it must contain `data-modal-close`.
   * It can be moved to an actual button in the lower part of the modal, inline with other buttons
 
 ### Styling
@@ -61,8 +63,6 @@ You can style the modal any way you wish in order to keep it in your theme. Belo
 | modal-content     | the modal itself
 | modal-close       | the close button
 | a11y-hide         | used to visually hide elements but allow them to be used by screen readers
-| title             | class used for the modal title (accessibility)
-| desc              | class used for the modal description (accessibility)
 
 These classes are used behind the scenes
 
@@ -70,3 +70,6 @@ These classes are used behind the scenes
 | :--------- | :---------------
 | is-locked  | class used to lock the body when modals open
 | modal-show | class used to display the modal and overlay
+
+## Todos
+* Allow clicking on overlay to close modal
