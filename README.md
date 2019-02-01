@@ -3,11 +3,12 @@ Pure JS modal component.
 
 
 ## Usage
-Surround your main content with the following:
+Surround your main content, including header & footer, with the following:
 ```html
 <div class="main-body-content"></div>
 ```
-This will allow the main content to be blurred when a modal opens.
+This will allow that content to be blurred when a modal opens.
+
 :page_facing_up: Note:
 
 Do **not** add `max-width` to the `body` tag. That will cause the body to shift to the left when the screen is wider than the max-width.
