@@ -14,7 +14,7 @@ gulp.task('sass', function () {
       browsers: ['last 2 versions', 'ie 9'],
       cascade: false
     }))
-    .pipe(cssmin())
+    //.pipe(cssmin())
     .pipe(gulp.dest('dist'));
 });
 

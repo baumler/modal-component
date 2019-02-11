@@ -48,9 +48,9 @@ modal.init = () => {
 modal.show = () => {
   modal.setBodyScroll();
   document.querySelector('html').classList.add('is-locked');
-  const content = document.querySelector('.blurred-content');
-  if (content) {
-    content.setAttribute('aria-hidden', true);
+  const container = document.querySelector('.page-container');
+  if (container) {
+    container.setAttribute('aria-hidden', true);
   } else {
     document.body.setAttribute('aria-hidden', true);
   }
@@ -73,9 +73,9 @@ modal.show = () => {
  */
 modal.hide = () => {
   document.querySelector('html').classList.remove('is-locked');
-  const content = document.querySelector('.blurred-content');
-  if (content) {
-    content.setAttribute('aria-hidden', false);
+  const container = document.querySelector('.page-container');
+  if (container) {
+    container.setAttribute('aria-hidden', false);
   } else {
     document.body.setAttribute('aria-hidden', false);
   }
@@ -122,6 +122,7 @@ modal.trap = (e) => {
 modal.setBodyScroll = () => {
   let scroll = window.pageYOffset;
   modal.bodyTop = scroll;
+  document.querySelector('header').style.top = `${scroll}px`; // ONLY IF HEADER IS FIXED
   document.body.style.top = `-${scroll}px`;
 }
 
@@ -130,6 +131,7 @@ modal.setBodyScroll = () => {
  */
 modal.clearBodyScroll = () => {
   document.body.style.top = '0';
+  document.querySelector('header').style.top ='0'; // ONLY IF HEADER IS FIXED
   window.scrollTo({
     top: modal.bodyTop
   });
