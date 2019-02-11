@@ -68,6 +68,9 @@ header {
   margin: auto;
   padding-top: 80px; }
 
+img {
+  max-width: 100%; }
+
 .modal {
   display: none;
   position: fixed;

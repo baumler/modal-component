@@ -16,8 +16,15 @@ const modal = {
  * initialize the modal, find the focusable children elements and set up the click handlers
  */
 modal.init = () => {
-  modal.set.forEach(modal => {
-    modal.setAttribute('aria-hidden', 'true');
+  modal.set.forEach(modalitem => {
+    modalitem.setAttribute('aria-hidden', 'true');
+
+    // background click event
+    modalitem.addEventListener('click', function(e) {
+      if (e.target === modalitem) {
+        modal.hide();
+      }
+    });
   });
   modal.openTriggers.forEach(trigger => {
     trigger.addEventListener('click', function(e) {
