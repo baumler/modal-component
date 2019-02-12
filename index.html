@@ -1,160 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-  <title>Modal Component</title>
-
-  <link href="/dist/main.css" rel="stylesheet">
+  <title>Parcel Sandbox</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="/dist/main.css" rel="stylesheet" />
 </head>
 
 <body>
-<div class="page-container">
-  <!-- put header and footer inside here in order for the blur effect to work correctly -->
-  <header>
-    Header content
-  </header>
+  <div class="page-container">
+    <!--
+      put header and footer inside here in order for the blur effect to work correctly
+    -->
+    <header>Header info!</header>
 
-  <div class="page-content">
-    <h1>Just a test!</h1>
+    <div class="page-content">
+      <h1>Just a test!</h1>
 
-    <p>
-      Galão sweet as doppio viennese, breve skinny, lungo et as robusta at roast frappuccino coffee extra at cultivar black. Id, latte iced grounds,
-      kopi-luwak coffee breve, aromatic, single shot, brewed, crema body robusta crema strong. Arabica, iced so pumpkin spice, and shop, id, coffee
-      galão body espresso french press java dripper, est crema in redeye that breve cup eu so galão. So dark sweet blue mountain, qui organic
-      americano coffee cup, mug espresso froth con panna wings. Grounds kopi-luwak, cup, sugar mocha extra affogato, aftertaste, americano viennese,
-      single shot cappuccino froth espresso foam acerbic. Brewed medium brewed wings, and foam, saucer variety white, organic shop, cup, crema galão
-      to go as kopi-luwak so single origin. Decaffeinated pumpkin spice, chicory spoon mug, aftertaste as blue mountain grinder seasonal robusta
-      seasonal milk cream arabica galão. Skinny, irish aromatic shop a lungo kopi-luwak coffee variety affogato, coffee java arabica iced roast iced
-      body galão cortado pumpkin spice.
-    </p>
+      <p>
+        Galão sweet as doppio viennese, breve skinny, lungo et as robusta at
+        roast frappuccino coffee extra at cultivar black. Id, latte iced
+        grounds, kopi-luwak coffee breve, aromatic, single shot, brewed, crema
+        body robusta crema strong. Arabica, iced so pumpkin spice, and shop,
+        id, coffee galão body espresso french press java dripper, est crema in
+        redeye that breve cup eu so galão. So dark sweet blue mountain, qui
+        organic americano coffee cup, mug espresso froth con panna wings.
+        Grounds kopi-luwak, cup, sugar mocha extra affogato, aftertaste,
+        americano viennese, single shot cappuccino froth espresso foam
+        acerbic. Brewed medium brewed wings, and foam, saucer variety white,
+        organic shop, cup, crema galão to go as kopi-luwak so single origin.
+        Decaffeinated pumpkin spice, chicory spoon mug, aftertaste as blue
+        mountain grinder seasonal robusta seasonal milk cream arabica galão.
+        Skinny, irish aromatic shop a lungo kopi-luwak coffee variety
+        affogato, coffee java arabica iced roast iced body galão cortado
+        pumpkin spice.
+      </p>
 
-    <button class="modal-open" data-modal-trigger="modal-1">Open modal 1</button>
-
-    <p><img src="https://picsum.photos/1000/400?image=1062" alt="test image 1"/></p>
-
-    <p>
-      Extra, macchiato, ristretto decaffeinated, barista, caramelization, cup and mug fair trade grinder single shot trifecta percolator mocha lungo.
-      Body black body chicory variety that blue mountain, crema beans doppio bar, variety, cup, spoon body plunger pot café au lait aroma. Rich
-      viennese aromatic body siphon qui, grounds decaffeinated galão id java cup doppio carajillo mug arabica plunger pot robust extraction. Froth
-      viennese carajillo, coffee milk bar fair trade extraction mocha medium, viennese beans con panna to go caffeine saucer foam. Variety, dripper
-      milk mazagran, et, viennese french press, cappuccino redeye ut eu barista dripper, id eu galão ristretto, galão breve robust coffee iced.
-      Macchiato, organic, steamed bar extraction café au lait sit cup single shot, shop, bar eu cup macchiato decaffeinated filter french press
-      seasonal irish trifecta cup pumpkin spice. Saucer sweet at mazagran in decaffeinated, foam, mazagran extra foam whipped that latte, percolator
-      con panna, eu aromatic viennese sit et americano wings. So, aftertaste organic wings id body so shop doppio roast milk, extra, roast, strong
-      single shot, that java grounds froth, qui barista rich white shop.
-    </p>
-
-    <button class="modal-open" data-modal-trigger="modal-2">Open modal 2</button>
-
-    <p>
-      And robust pumpkin spice sweet macchiato spoon caramelization single shot id, roast shop, espresso, roast, mazagran, mocha, lungo cappuccino
-      plunger pot chicory barista. Bar acerbic variety milk coffee sugar café au lait cup saucer cinnamon, foam trifecta sit bar white. Viennese,
-      acerbic, irish cup, extraction ristretto, coffee carajillo dark, as id dripper eu, body, brewed sweet viennese fair trade organic medium cinnamon.
-      Cultivar spoon that aged white, cinnamon french press instant beans grounds cultivar crema irish, medium sit single shot foam irish coffee. Irish
-      cappuccino mug trifecta dark roast, organic, extra con panna milk redeye, cream, viennese plunger pot body mug percolator iced whipped trifecta
-      robust skinny. Est viennese single shot, variety eu caffeine latte skinny cortado organic cortado sit wings siphon java. Aged filter galão fair
-      trade, black, carajillo, affogato breve milk cappuccino beans, con panna percolator froth aromatic cinnamon. Bar, viennese caramelization to go
-      viennese percolator breve, pumpkin spice and milk grinder café au lait, macchiato breve a roast steamed extra affogato.
-    </p>
-
-    <button class="modal-open" data-modal-trigger="modal-3">Open modal 3</button>
-
-    <p><img src="https://picsum.photos/1500/400?image=882" alt="test image 2"/></p>
-
-    <p>
-      Redeye single shot, redeye café au lait, con panna flavour est aroma, mazagran extraction, acerbic in lungo foam cinnamon coffee breve a mocha
-      aroma roast con panna crema. Robusta est medium, body barista, white sugar siphon doppio to go mug coffee sit et, bar con panna body fair trade
-      eu cream. Redeye, id grinder aroma cream, decaffeinated french press, pumpkin spice dark, trifecta, extra robusta doppio as java, sit doppio,
-      whipped chicory a medium whipped skinny. Turkish, and body, americano, medium irish grinder aged bar, galão, foam steamed, iced, cup bar, cream,
-      instant siphon, crema barista turkish rich iced. Caffeine seasonal foam trifecta, sugar, frappuccino extraction, sugar rich brewed froth shop
-      plunger pot. Brewed, sugar est a, white, cortado spoon, brewed grinder cultivar sweet coffee sugar, skinny espresso, chicory, crema single shot,
-      kopi-luwak con panna roast macchiato sweet. Redeye ristretto, acerbic sweet mocha frappuccino ut java crema foam, kopi-luwak half and half blue
-      mountain americano foam fair trade crema, skinny seasonal that turkish single shot pumpkin spice. Trifecta shop carajillo cinnamon, crema barista
-      grinder cappuccino, froth, mocha cappuccino extra spoon saucer.
-    </p>
-
-    <button class="modal-open" data-modal-trigger="modal-4">Open modal 4</button>
-
-    <p>
-      Galão sweet as doppio viennese, breve skinny, lungo et as robusta at roast frappuccino coffee extra at cultivar black. Id, latte iced grounds,
-      kopi-luwak coffee breve, aromatic, single shot, brewed, crema body robusta crema strong. Arabica, iced so pumpkin spice, and shop, id, coffee
-      galão body espresso french press java dripper, est crema in redeye that breve cup eu so galão. So dark sweet blue mountain, qui organic
-      americano coffee cup, mug espresso froth con panna wings. Grounds kopi-luwak, cup, sugar mocha extra affogato, aftertaste, americano viennese,
-      single shot cappuccino froth espresso foam acerbic. Brewed medium brewed wings, and foam, saucer variety white, organic shop, cup, crema galão
-      to go as kopi-luwak so single origin. Decaffeinated pumpkin spice, chicory spoon mug, aftertaste as blue mountain grinder seasonal robusta
-      seasonal milk cream arabica galão. Skinny, irish aromatic shop a lungo kopi-luwak coffee variety affogato, coffee java arabica iced roast iced
-      body galão cortado pumpkin spice.
-    </p>
-  </div>
-
-  <footer style="text-align: center; padding: 1rem;">
-    &copy;2019 Tyler Baumler
-  </footer>
-</div>
-
-<!-- Here is were we put the modals -->
-<div class="modal" data-modal="modal-1">
-  <div class="modal-content" role="dialog" tabindex="0" aria-labelledby="title1" aria-describedby="desc1">
-    <div class="modal-close">
-      <button data-modal-close>
-        <span class="a11y-hide">Close dialog</span>
+      <!--
+        I suggest that if the stlye of the button has all caps, that we do the following for screen readers
+        * add aria-label
+        * surrond the actual text with aria-hidden="true"
+      -->
+      <button
+          class="modal-open"
+          data-modal-trigger="modal-1"
+          aria-label="open modal 1"
+      >
+        <span aria-hidden="true">Open modal 1</span>
       </button>
+
+      <p>
+        <img
+            src="https://picsum.photos/1000/400?image=1062"
+            alt="test image 1"
+        />
+      </p>
+
+      <p>
+        Extra, macchiato, ristretto decaffeinated, barista, caramelization,
+        cup and mug fair trade grinder single shot trifecta percolator mocha
+        lungo. Body black body chicory variety that blue mountain, crema beans
+        doppio bar, variety, cup, spoon body plunger pot café au lait aroma.
+        Rich viennese aromatic body siphon qui, grounds decaffeinated galão id
+        java cup doppio carajillo mug arabica plunger pot robust extraction.
+        Froth viennese carajillo, coffee milk bar fair trade extraction mocha
+        medium, viennese beans con panna to go caffeine saucer foam. Variety,
+        dripper milk mazagran, et, viennese french press, cappuccino redeye ut
+        eu barista dripper, id eu galão ristretto, galão breve robust coffee
+        iced. Macchiato, organic, steamed bar extraction café au lait sit cup
+        single shot, shop, bar eu cup macchiato decaffeinated filter french
+        press seasonal irish trifecta cup pumpkin spice. Saucer sweet at
+        mazagran in decaffeinated, foam, mazagran extra foam whipped that
+        latte, percolator con panna, eu aromatic viennese sit et americano
+        wings. So, aftertaste organic wings id body so shop doppio roast milk,
+        extra, roast, strong single shot, that java grounds froth, qui barista
+        rich white shop.
+      </p>
+
+      <button
+          class="modal-open"
+          data-modal-trigger="modal-2"
+          aria-label="open modal 2"
+      >
+        <span aria-hidden="true">Open modal 2</span>
+      </button>
+
+      <p>
+        And robust pumpkin spice sweet macchiato spoon caramelization single
+        shot id, roast shop, espresso, roast, mazagran, mocha, lungo
+        cappuccino plunger pot chicory barista. Bar acerbic variety milk
+        coffee sugar café au lait cup saucer cinnamon, foam trifecta sit bar
+        white. Viennese, acerbic, irish cup, extraction ristretto, coffee
+        carajillo dark, as id dripper eu, body, brewed sweet viennese fair
+        trade organic medium cinnamon. Cultivar spoon that aged white,
+        cinnamon french press instant beans grounds cultivar crema irish,
+        medium sit single shot foam irish coffee. Irish cappuccino mug
+        trifecta dark roast, organic, extra con panna milk redeye, cream,
+        viennese plunger pot body mug percolator iced whipped trifecta robust
+        skinny. Est viennese single shot, variety eu caffeine latte skinny
+        ortado organic cortado sit wings siphon java. Aged filter galão fair
+        trade, black, carajillo, affogato breve milk cappuccino beans, con
+        panna percolator froth aromatic cinnamon. Bar, viennese caramelization
+        to go viennese percolator breve, pumpkin spice and milk grinder café
+        au lait, macchiato breve a roast steamed extra affogato.
+      </p>
+
+      <button
+          class="modal-open"
+          data-modal-trigger="modal-3"
+          aria-label="open modal 3"
+      >
+        <span aria-hidden="true">Open modal 3</span>
+      </button>
+
+      <p>
+        <img
+            src="https://picsum.photos/1000/400?image=882"
+            alt="test image 2"
+        />
+      </p>
+
+      <p>
+        Redeye single shot, redeye café au lait, con panna flavour est aroma,
+        mazagran extraction, acerbic in lungo foam cinnamon coffee breve a
+        mocha aroma roast con panna crema. Robusta est medium, body barista,
+        white sugar siphon doppio to go mug coffee sit et, bar con panna body
+        fair trade eu cream. Redeye, id grinder aroma cream, decaffeinated
+        french press, pumpkin spice dark, trifecta, extra robusta doppio as
+        java, sit doppio, whipped chicory a medium whipped skinny. Turkish,
+        and body, americano, medium irish grinder aged bar, galão, foam
+        steamed, iced, cup bar, cream, instant siphon, crema barista turkish
+        rich iced. Caffeine seasonal foam trifecta, sugar, frappuccino
+        extraction, sugar rich brewed froth shop plunger pot. Brewed, sugar
+        est a, white, cortado spoon, brewed grinder cultivar sweet coffee
+        sugar, skinny espresso, chicory, crema single shot, kopi-luwak con
+        panna roast macchiato sweet. Redeye ristretto, acerbic sweet mocha
+        frappuccino ut java crema foam, kopi-luwak half and half blue mountain
+        americano foam fair trade crema, skinny seasonal that turkish single
+        shot pumpkin spice. Trifecta shop carajillo cinnamon, crema barista
+        grinder cappuccino, froth, mocha cappuccino extra spoon saucer.
+      </p>
+
+      <button
+          class="modal-open"
+          data-modal-trigger="modal-4"
+          aria-label="open modal 4"
+      >
+        <span aria-hidden="true">Open modal 4</span>
+      </button>
+
+      <p>
+        Galão sweet as doppio viennese, breve skinny, lungo et as robusta at
+        roast frappuccino coffee extra at cultivar black. Id, latte iced
+        grounds, kopi-luwak coffee breve, aromatic, single shot, brewed, crema
+        body robusta crema strong. Arabica, iced so pumpkin spice, and shop,
+        id, coffee galão body espresso french press java dripper, est crema in
+        redeye that breve cup eu so galão. So dark sweet blue mountain, qui
+        organic americano coffee cup, mug espresso froth con panna wings.
+        Grounds kopi-luwak, cup, sugar mocha extra affogato, aftertaste,
+        americano viennese, single shot cappuccino froth espresso foam
+        acerbic. Brewed medium brewed wings, and foam, saucer variety white,
+        organic shop, cup, crema galão to go as kopi-luwak so single origin.
+        Decaffeinated pumpkin spice, chicory spoon mug, aftertaste as blue
+        mountain grinder seasonal robusta seasonal milk cream arabica galão.
+        Skinny, irish aromatic shop a lungo kopi-luwak coffee variety
+        affogato, coffee java arabica iced roast iced body galão cortado
+        pumpkin spice.
+      </p>
     </div>
 
-    <h2 id="title1">Model 1</h2>
-
-    <p id="desc1">Extra, macchiato, ristretto decaffeinated, barista, caramelization, cup and mug fair trade grinder single shot trifecta percolator mocha lungo.</p>
-
-    <button>Maybe?</button>
+    <footer style="text-align: center; padding: 1rem;">
+      &copy;2018 Tyler Baumler
+    </footer>
   </div>
-</div>
 
-<div class="modal" data-modal="modal-2">
-  <div class="modal-content" role="dialog" tabindex="0" aria-labelledby="title2" aria-describedby="desc2">
-    <div class="modal-close">
-      <button data-modal-close>
-        <span class="a11y-hide">Close dialog</span>
-      </button>
+  <div class="modal" data-modal="modal-1">
+    <div
+        class="modal-content"
+        role="dialog"
+        tabindex="0"
+        aria-labelledby="title1"
+        aria-describedby="desc1"
+    >
+      <div class="modal-close">
+        <button data-modal-close aria-label="close dialog"></button>
+      </div>
+
+      <h2 id="title1">Model 1</h2>
+
+      <p id="desc1">
+        Extra, macchiato, ristretto decaffeinated, barista, caramelization,
+        cup and mug fair trade grinder single shot trifecta percolator mocha
+        lungo.
+      </p>
+
+      <button>I do nothing</button>
     </div>
-
-    <h2 id="title2">Model 2</h2>
-
-    <p id="desc2">Brewed medium brewed wings, and foam, saucer variety white, organic shop, cup, crema galão to go as kopi-luwak so single origin.</p>
   </div>
-</div>
 
-<div class="modal" data-modal="modal-3">
-  <div class="modal-content" role="dialog" tabindex="0" aria-labelledby="title3" aria-describedby="desc3">
-    <div class="modal-close">
-      <button data-modal-close>
-        <span class="a11y-hide">Close dialog</span>
-      </button>
+  <div class="modal" data-modal="modal-2">
+    <div
+        class="modal-content"
+        role="dialog"
+        tabindex="0"
+        aria-labelledby="title2"
+        aria-describedby="desc2"
+    >
+      <div class="modal-close">
+        <button data-modal-close aria-label="close dialog"></button>
+      </div>
+
+      <h2 id="title2">Model 2</h2>
+
+      <p id="desc2">
+        Brewed medium brewed wings, and foam, saucer variety white, organic
+        shop, cup, crema galão to go as kopi-luwak so single origin.
+      </p>
+
+      <button>I do nothing</button> <button>I also do nothing</button>
     </div>
-
-    <h2 id="title3">Model 3</h2>
-
-    <p id="desc3">Robusta est medium, body barista, white sugar siphon doppio to go mug coffee sit et, bar con panna body fair trade eu cream.</p>
   </div>
-</div>
 
-<div class="modal" data-modal="modal-4">
-  <div class="modal-content" role="dialog" tabindex="0" aria-labelledby="title4" aria-describedby="desc4">
-    <div class="modal-close">
-      <button data-modal-close>
-        <span class="a11y-hide">Close dialog</span>
-      </button>
+  <div class="modal" data-modal="modal-3">
+    <div
+        class="modal-content"
+        role="dialog"
+        tabindex="0"
+        aria-labelledby="title3"
+        aria-describedby="desc3"
+    >
+      <div class="modal-close">
+        <button data-modal-close aria-label="close dialog"></button>
+      </div>
+
+      <h2 id="title3">Model 3</h2>
+
+      <p id="desc3">
+        Robusta est medium, body barista, white sugar siphon doppio to go mug
+        coffee sit et, bar con panna body fair trade eu cream.
+      </p>
+
+      <form>
+        <div>
+          <label for="name">
+            Full Name <input type="text" id="name" />
+          </label>
+        </div>
+
+        <div>
+          <label for="street">
+            Street Address <input type="text" id="street" />
+          </label>
+        </div>
+
+        <div>
+          <label for="city"> City <input type="text" id="city" /> </label>
+        </div>
+
+        <div>
+          <label for="state"> State <input type="text" id="state" /> </label>
+        </div>
+
+        <button>Submit</button>
+      </form>
     </div>
-
-    <h2 id="title4">Model 4</h2>
-
-    <p id="desc4">Froth viennese carajillo, coffee milk bar fair trade extraction mocha medium, viennese beans con panna to go caffeine saucer foam.</p>
   </div>
-</div>
 
-<script src="/dist/main.js"></script>
+  <div class="modal" data-modal="modal-4">
+    <div
+        class="modal-content"
+        role="dialog"
+        tabindex="0"
+        aria-labelledby="title4"
+        aria-describedby="desc4"
+    >
+      <div class="modal-close">
+        <button data-modal-close aria-label="close dialog"></button>
+      </div>
+
+      <h2 id="title4">Model 4</h2>
+
+      <p id="desc4">
+        Froth viennese carajillo, coffee milk bar fair trade extraction mocha
+        medium, viennese beans con panna to go caffeine saucer foam.
+      </p>
+    </div>
+  </div>
+
+  <script src="/dist/main.js"></script>
 </body>
 </html>

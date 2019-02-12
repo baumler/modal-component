@@ -12,7 +12,7 @@ const modal = {
 };
 
 /**
- * initialize the modal, find the focusable children elements and set up the click handlers
+ * initialize the modal and set up the click handlers
  */
 modal.init = () => {
   modal.set.forEach(modalitem => {
