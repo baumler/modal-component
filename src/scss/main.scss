@@ -1,2 +1,135 @@
-@import "base/global";
-@import "components/modals";
+html {
+    margin: 0;
+    padding: 0;
+
+    &.is-locked {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+
+        body {
+            position: fixed;
+        }
+
+        // If you want to blur the background
+        .page-container {
+            filter: blur(4px);
+        }
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.a11y-hide {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    clip: rect( 1px, 1px, 1px, 1px );
+    border: 0;
+
+    &:focus {
+        width: auto;
+        height: auto;
+        clip: auto;
+        position: static;
+    }
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    &,
+    * {
+        box-sizing: border-box;
+    }
+
+    &-show {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-content {
+        position: relative;
+        width: 90%;
+        max-width: 40rem;
+        padding: 2rem;
+        margin: auto;
+        color: grey;
+        font-size: 1rem;
+        background-color: #ffffff;
+        border-radius: 10px;
+        z-index: 2;
+    }
+
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(61, 61, 61, 0.8);
+        z-index: 1;
+    }
+
+    &-close {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+
+        button, a {
+            position: relative;
+            height: 30px;
+            width: 30px;
+            background: white;
+            border: 1px solid grey;
+            border-radius: 5px;
+
+            &:after,
+            &:before {
+                content: '';
+                position: absolute;
+                top: 13px;
+                left: 4px;
+                width: 20px;
+                height: 3px;
+                background: green;
+            }
+
+            &:before {
+                transform: rotate(45deg);
+            }
+
+            &:after {
+                transform: rotate(-45deg);
+            }
+
+            &:hover,
+            &:focus {
+                &:after,
+                &:before {
+                    background: red;
+                }
+            }
+        }
+    }
+}

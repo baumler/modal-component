@@ -13,13 +13,13 @@ This will allow that content to be blurred when a modal opens.
 
 Do **not** add `max-width` to the `body` tag. That will cause the body to shift to the left when the screen is wider than the max-width.
 
-### The Trigger
 Include both the CSS and JS files from the dist folder.
 ```html
-  <link href="/dist/main.css" rel="stylesheet">
-  <script async src="/dist/main.js"></script>
+  <link href="/dist/main.css" rel="stylesheet" />
+  <script async src="/dist/main.js" />
 ```
 
+### The Trigger
 Add the following to trigger a modal to open:
 ```html
 <button data-modal-trigger="example-modal">Open modal</button>
@@ -32,12 +32,29 @@ It **must** contain a unique name and match that of the modal's `data-modal`.
 ### The Modal
 Add the following:
 ```html
-<div class="modal" data-modal="example-modal">
-  <div class="modal-content" role="dialog" tabindex="0" aria-labelledby="title" aria-describedby="desc">
+<!-- remove, or set to false
+     "data-modal-overlay-close" if you do not want to be able
+     to click on the overlay to close -->
+<div
+    class="modal"
+    data-modal="example-modal"
+    data-modal-overlay-click="true"
+>
+  
+  <div
+      class="modal-content"
+      role="dialog"
+      tabindex="0"
+      aria-labelledby="title"
+      aria-describedby="desc"
+  >
+    
     <div class="modal-close">
+      
       <button data-modal-close>
         <span class="a11y-hide">Close dialog</span>
       </button>
+    
     </div>
 
     <h2 id="title">Example Model</h2>
@@ -55,7 +72,7 @@ Add the following:
   * They must be unique
   * Make sure to update the names in the corresponding `aria` tag.
 * You **must** keep a close button and it must contain `data-modal-close`.
-  * It can be moved to an actual button in the lower part of the modal, inline with other buttons
+  * It can be changed to an actual button in the lower part of the modal, inline with other buttons
 
 ### Styling
 You can style the modal any way you wish in order to keep it in your theme. Below are a list of the classes and their purpose.
@@ -63,10 +80,11 @@ You can style the modal any way you wish in order to keep it in your theme. Belo
 | Class Name      | Purpose
 | :-------------- | :---------------
 | blurred-content | content wrapper that can have a max-width, it is used to apply the blur effect behind the modal
-| modal           | full screen background overlay and contains the modal itself
+| modal           | full screen takeover
+| modal-overlay   | the modal's overlay 
 | modal-content   | the modal itself
-| modal-close     | the close button
-| a11y-hide       | used to visually hide elements but allow them to be used by screen readers
+| modal-close     | the modal's close button
+| a11y-hide       | class used to visually hide elements but allow them to be used by screen readers
 
 These classes are used behind the scenes
 
@@ -74,6 +92,3 @@ These classes are used behind the scenes
 | :--------- | :---------------
 | is-locked  | class used to lock the body when modals open
 | modal-show | class used to display the modal and overlay
-
-## Todos
-* Allow clicking on overlay to close modal

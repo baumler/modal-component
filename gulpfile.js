@@ -1,31 +1,31 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var cssmin = require('gulp-cssmin');
-var concat = require('gulp-concat');
+const {src, dest, watch, series} = require('gulp')
+const sass = require('gulp-dart-sass')
+const autoprefixer = require('gulp-autoprefixer')
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglify')
 
-// gotta use that sass bro
-gulp.task('sass', function () {
-  gulp.src('src/scss/main.scss')
-    .pipe(sass({
-      errLogToConsole: true
-    }))
-    .pipe(autoprefixer({
-      browsers: ['last 2 versions', 'ie 9'],
-      cascade: false
-    }))
-    //.pipe(cssmin())
-    .pipe(gulp.dest('dist'));
-});
+function sassTask() {
+  return src('src/scss/main.scss', { sourcemaps: true })
+      .pipe(sass({ outputStyle: 'compressed', file: "main.css" }).on('error', sass.logError))
+      .pipe(autoprefixer({
+        cascade: false
+      }))
+      .pipe(dest('dist/', { sourcemaps: true }));
+}
 
-gulp.task('scripts', function(){
-  gulp.src('src/js/**/*.js')
-    .pipe(concat('main.js'))
-    .pipe(gulp.dest('dist'))
-});
+function jsTask() {
+    return src('src/js/**/*.js', { sourcemaps: true })
+        .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(dest('dist/', { sourcemaps: true }))
+}
 
+function watcher() {
+    watch(['src/scss/**/*'], ['cssTask'])
+    watch(['src/js/**/*'], ['jsTask'])
+}
 
-gulp.task('default', ['sass', 'scripts'], function() {
-  gulp.watch('src/scss/**/*', ['sass']);
-  gulp.watch('src/js/**/*', ['scripts']);
-});
+exports.css = sassTask
+exports.js = jsTask
+exports.dev = watcher
+exports.prod = series(jsTask, sassTask)
